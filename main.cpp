@@ -8,6 +8,8 @@
 
 #include "merge_sort.hpp"
 #include "radix_sort.hpp"
+#include "quick_sort.hpp"
+#include "count_sort.hpp"
 //add sort algorithm headers here
 
 using namespace std;
@@ -20,6 +22,8 @@ struct Algorithm {
 const Algorithm algorithms[] = {
   {"Merge", merge_sort},
   {"Radix", radix_sort},
+  {"Quick", quick_sort},
+  {"Count", count_sort}
   //add lablel and function pointers here
 };
 
