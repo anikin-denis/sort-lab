@@ -10,7 +10,7 @@
 #include "radix_sort.hpp"
 #include "quick_sort.hpp"
 #include "count_sort.hpp"
-//add sort algorithm headers here
+#include "sort.c"
 
 using namespace std;
 
@@ -23,8 +23,9 @@ const Algorithm algorithms[] = {
   {"Merge", merge_sort},
   {"Radix", radix_sort},
   {"Quick", quick_sort},
-  {"Count", count_sort}
-  //add lablel and function pointers here
+  {"Count", count_sort},
+  {"Bubbble", bubbleSortAscending},
+  {"Insertion", insertionSort}
 };
 
 const size_t sizes[] = {10, 1000, 10000, 1000000, 100000000};
@@ -32,7 +33,7 @@ const char* sizeLabels[] = {"10", "1k", "10k", "1M", "100M"};
 const size_t sizeCount = sizeof(sizes) / sizeof(sizes[0]);
 const size_t maxSize = 100000000;
 const double stopSeconds = 0.01;
-const size_t algorithmCount = 2;
+const size_t algorithmCount = 6;
 
 void fill(unsigned int* out) {
   std::minstd_rand gen(12345);
